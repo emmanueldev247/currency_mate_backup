@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Titillium+Web:ital,wght@0,400;1,600&display=swap');
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #02226f;
+	display: flex;
+	align-items: center;
+	transition: box-shadow 0.3s ease, padding 0.3s ease;
+	z-index: 1000;
+}
+
+.header.scrolled {
+	box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.3); /* Add shadow when scrolled */
+}
+
+.logo-container {
+	display: flex;
+	align-items: center;
+	padding: 2px 0;
+}
+
+.logo {
+	height: 64px;
+	width: 73px;
+	transition: height 0.3s ease, width 0.3s ease;
+	margin-right: 5px
+}
+
+.header.scrolled .logo {
+	height: 48px;
+	width: 55px;
+}
+
+.logo-text {
+	margin-top: -5px;
+	color: white;
+	text-align: right;
+}
+
+.logo-name {
+	margin: 0;
+	margin-top: -1px;
+	font-family: "Merienda", cursive;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 37px;
+	transition: font-size 0.3s ease;
+}
+
+
+.header.scrolled .logo-name {
+	font-size: 29px;
+}
+
+
+.slogan {
+	margin: 0;
+	margin-top: 1px;
+	font-family: "Josefin Sans", sans-serif;
+	font-size: 9px;
+	transition: font-size 0.3s ease;
+}
+
+.header.scrolled .slogan {
+	font-size: 7px;
+}
+
+.tabs {
+	margin-left: auto;
+}
+
+.tabs ul {
+	list-style: none;
+	padding-right: 50px;
+}
+
+.tabs ul li {
+	display: inline;
+}
+
+.tabs ul li a {
+	color: white;
+	text-decoration: none;
+	padding: 0 20px;
+	font-weight: 600;
+	font-size: 14px;
+	transition: font-size 0.3s ease, padding 0.3s ease, color 0.3s ease;
+}
+
+.tabs ul li a:hover {
+	color: lightblue;
+}
+
+.header.scrolled .tabs ul li a {
+	font-size: 12px;
+	padding: 0 15px;
+}
+
+
+/******** OUR FORM STYLE HERE ***********/
+.container {
+	margin: auto;
+	margin-top: 150px;
+	margin-bottom: 100px;
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 7px;
+	max-width: 1000px;
+	box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.flex-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.flex-form p {
+	font-weight: 700;
+	color: #02226f;
+	font-size: 18px;
+	font-family: "Josefin Sans", sans-serif;
+}
+
+.flex-button {
+	align-self: flex-end;
+}
+
+.flex-input {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.form-group {
+	margin: 10px;
+	font-family: "Josefin Sans", sans-serif;
+	font-weight: 600;
+}
+
+.form-group input[type="number"],
+.form-group select {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+	margin-top: 7px;
+	width: 100%;
+	height: 50px;
+	font-family: "Josefin Sans", sans-serif;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input[type="number"]:hover,
+.form-group select:hover {
+	outline: 1px solid black;
+}
+
+.form-group input[type="number"]:focus,
+.form-group select:focus {
+	outline: 1px solid #02226f;
+}
+
+.form-group select:focus,
+.form-group select:active {
+	background-color: #cce4ff;
+}
+
+
+.flex-button button {
+	margin-top: 20px;
+	width: 100%;
+	background-color: #02226f;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+
+.flex-button button:hover {
+	background-color: #134fa9;
+}
+
+#result {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
